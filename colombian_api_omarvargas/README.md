@@ -12,12 +12,13 @@ Aquí tienes algunas capturas de pantalla de la aplicación en funcionamiento:
 
 ### 1. Pantalla Aeropuerto
 ![Pantalla Principal](./President-Airport-1.PNG)
+![Pantalla Principal](./President-Tab2.PNG)
 
 ### 2. Tab de Presidentes
-![Tab de Presidentes](./images/President-Tab.png)
+![Tab de Presidentes](./President-Tab.png)
 
 ### 3. Otra Funcionalidad
-![Otra Funcionalidad](./TA-Tab.PNG)
+![Atracciones Turisticas](./TA-Tab.PNG)
 
 ## Estructura del Proyecto 🗂️
 
