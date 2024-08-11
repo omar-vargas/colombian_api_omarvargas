@@ -15,7 +15,7 @@ Aquí tienes algunas capturas de pantalla de la aplicación en funcionamiento:
 ![Pantalla Principal](./President-Tab2.PNG)
 
 ### 2. Tab de Presidentes
-![Tab de Presidentes](./President-Tab.png)
+![Tab de Presidentes](./President-Tab.PNG)
 
 ### 3. Otra Funcionalidad
 ![Atracciones Turisticas](./TA-Tab.PNG)
