@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Colombian API - Omar Vargas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](.//President-Airport-1.png)
 
-## Available Scripts
+## Descripción del Proyecto 📝
 
-In the project directory, you can run:
+Este proyecto es una aplicación web desarrollada en React que consume una API pública de Colombia. La aplicación presenta datos agrupados sobre Presidentes, Aeropuertos y Atracciones Turísticas en Colombia. Además, la aplicación ha sido dockerizada para facilitar su despliegue.
 
-### `npm start`
+## Vista Previa de la Aplicación 🖥️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Aquí tienes algunas capturas de pantalla de la aplicación en funcionamiento:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Pantalla Aeropuerto
+![Pantalla Principal](./President-Airport-1.PNG)
 
-### `npm test`
+### 2. Tab de Presidentes
+![Tab de Presidentes](./images/President-Tab.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Otra Funcionalidad
+![Otra Funcionalidad](./TA-Tab.PNG)
 
-### `npm run build`
+## Estructura del Proyecto 🗂️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **/src**: Código fuente de la aplicación React.
+- **/public**: Archivos estáticos y el archivo `index.html` principal.
+- **Dockerfile**: Archivo de configuración para la creación de la imagen Docker.
+- **docker-compose.yml**: (Opcional) Archivo de configuración para Docker Compose.
+- **package.json**: Dependencias y scripts de npm.
+- **README.md**: Documentación del proyecto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Requisitos Previos 🔧
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** (versión 14 o superior)
+- **npm** (gestor de paquetes de Node.js)
+- **Docker** (para la ejecución en contenedores)
+- **Git** (para la clonación y manejo del repositorio)
 
-### `npm run eject`
+## Instalación y Ejecución Local 🚀
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clonar el Repositorio**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Clona este repositorio a tu máquina local usando Git:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   git clone https://github.com/tu_usuario/colombian_api_omarvargas.git
+   cd colombian_api_omarvargas
