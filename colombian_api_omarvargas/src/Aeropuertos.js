@@ -46,6 +46,10 @@ const AeropuertosTab = () => {
   const aeropuertosOrdenadosDeptoCiudad = ordenarDatos(aeropuertosPorDepartamentoYCiudad, orden);
   const aeropuertosOrdenadosRegionDeptoCiudadTipo = ordenarDatos(aeropuertosPorRegionDepartamentoCiudadTipo, orden);
 
+  // Funciones de exportación
+  const handleExportJSON = () => exportarComoJSON(aeropuertos);
+  const handleExportCSV = () => exportarComoCSV(aeropuertos);
+
   return (
     <div className="aeropuertos-tab">
       <h3>Agrupamiento por Departamento y Ciudad</h3>
@@ -77,12 +81,18 @@ const AeropuertosTab = () => {
       <h3>Agrupamiento por Región, Departamento, Ciudad y Tipo</h3>
       <AeropuertoGroup data={aeropuertosOrdenadosRegionDeptoCiudadTipo} />
 
+      <div className="export-controls">
+        <button onClick={handleExportJSON}>Exportar como JSON</button>
+        <button onClick={handleExportCSV}>Exportar como CSV</button>
+      </div>
+
       {tiempoRespuesta && (
         <p className="response-time">Tiempo de respuesta: {tiempoRespuesta} ms</p>
       )}
     </div>
   );
 };
+
 
 // Funciones de agrupamiento
 const agruparAeropuertosPorDepartamentoYCiudad = (aeropuertos) => {
@@ -151,5 +161,40 @@ const ordenarDatos = (datos, orden) => {
 
   return sortedData;
 };
+
+
+const exportarComoJSON = (datos, nombreArchivo = 'datos.json') => {
+  const blob = new Blob([JSON.stringify(datos, null, 2)], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = nombreArchivo;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+const exportarComoCSV = (datos, nombreArchivo = 'datos.csv') => {
+  const csvRows = [];
+  const headers = Object.keys(datos[0]);
+  csvRows.push(headers.join(','));
+
+  for (const row of datos) {
+    const values = headers.map(header => JSON.stringify(row[header], replacer));
+    csvRows.push(values.join(','));
+  }
+
+  const csvString = csvRows.join('\n');
+  const blob = new Blob([csvString], { type: 'text/csv' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = nombreArchivo;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+const replacer = (key, value) => value === null ? '' : value;
+
+
 
 export default AeropuertosTab;
